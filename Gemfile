@@ -13,3 +13,5 @@ end
 gem 'jquery-rails'
 
 gem 'unicorn'
+gem 'RedCloth'
+gem 'ruby-debug19'

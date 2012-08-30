@@ -1,0 +1,23 @@
+<div>
+  <%= form_for(@entry) do |f| %>
+    <div class="tips">
+      <%= link_to 'textile記法(Redmine Help)', 'http://redmine.jp/tech_note/textile/', :target => '_blank' %>
+    </div>
+    <div>
+      <%= f.text_area :body %>
+    </div>
+    <div>
+      <%= f.submit "投稿する" %>
+    </div>
+  <% end %>
+</div>
+<div class="entries">
+  <%- for entry in @entries -%>
+  <div class="entry">
+    <h2 class="entry-subject"><%= entry.subject %></h2>
+    <div class="entry-body">
+      <%= raw textile entry.body %>
+    </div>
+  </div>
+  <%- end -%>
+</div>

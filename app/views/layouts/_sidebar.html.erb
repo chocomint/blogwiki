@@ -1,0 +1,6 @@
+<h4>最新の記事</h4>
+<ul>
+  <%- for entry in @entries -%>
+  <li><%= link_to truncate(entry.body, :length => 10), entry_path(entry) %></li>
+  <%- end -%>
+</ul>
