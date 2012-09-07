@@ -2,16 +2,14 @@
 <div class="hero-unit">
   <%= form_for(@entry) do |f| %>
     <p>
-    新しい記事を投稿する
+    記事を更新する
     </p>
     <div>
+      <%= link_to 'textile記法', 'http://redcloth.org/textile/', :target => '_blank', :class => 'icon-question-sign' %>
       <%= f.text_area :body %>
     </div>
     <div>
-      <%= f.submit "投稿する", :class => 'btn btn-primary' %>
+      <%= f.submit "更新する", :class => 'btn btn-primary' %>
     </div>
   <% end %>
 </div>
-<%= render :partial => 'entries/entry', :collection => @entries, :as => :entry, :locals => {:is_open => false} %>
-
-<%= paginate @entries %>

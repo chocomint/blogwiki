@@ -1,36 +1,54 @@
-// Place all the styles related to the entries controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
-div.main form {
-	margin: 50px;
+div.hero-unit textarea {
+	height: 200px;
+	width: 800px;
 }
 
-div.main form textarea {
-	width: 890px;
-	height: 300px;
-}
-
-div.entries {
-	margin: 50px;
-}
-
-div.entries div.entry {
-	margin: 20px 0;
-}
-
-div.tips {
-	text-align: right;
-}
-
-h2.entry-subject:hover {
-	background-color: #F0F0FF;
+div.hero-unit {
+	padding: 30px;
 }
 
 h2.entry-subject {
 	cursor:pointer;
 }
 
-div.entries div.entry-body {
+div.entry {
+	margin-bottom: 5px;
+	padding-left: 10px;
+}
+
+div.entry-body-close {
 	display: none;
+}
+
+div.entry-body {
+	padding-left: 30px;
+	padding-bottom: 10px;
+}
+
+div.entry h2 {
+	font-size: large;
+	margin-top: 0px;
+}
+
+div.entry hr {
+	margin: 10px 0;
+}
+
+div.entry-body-footer textarea {
+	height: 100px;
+	width: 770px;
+}
+
+div.alert-block ul {
+	padding-top: 10px;
+}
+
+blockquote p{
+	margin-bottom: 10px;
+}
+
+div.entry span.entry-date {
+	font-size: small;
+	color: grey;
+	padding-left: 10px;
 }

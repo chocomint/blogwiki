@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
 //= require_tree .
+//= require google-code-prettify-rails/prettify

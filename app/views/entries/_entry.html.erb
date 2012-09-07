@@ -1,0 +1,19 @@
+<div class="entry">
+  <h2 class="entry-subject"><%= link_to '・', entry_path(entry) %><%= entry.subject %><span class="entry-date"><%= entry.created_at.to_date %></span></h2>
+  <div class="entry-body<%= is_open ? '' : ' entry-body-close' %>">
+    <%= raw textile entry.body %>
+    <p class="right">
+    <%= link_to '編集', edit_entry_path(entry), :class => "btn btn-warning btn-mini" %>
+    <%= link_to '削除', entry_path(entry), :data => {:confirm => '本当に削除してもよろしいですか？'}, :method => 'delete', :class => "btn btn-inverse btn-mini" %>
+    </p>
+    <div class="entry-body-footer">
+      <div class="well">
+        <%= form_for(entry, {:method => 'put'}) do |f| %>
+          <%= f.text_area :more %>
+          <%= f.submit "追記する", :class => 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <hr />
+</div>

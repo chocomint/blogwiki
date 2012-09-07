@@ -2,4 +2,12 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  errors:
+    format: "・%{message}"
+  views:
+    pagination:
+      first: "&laquo; 最初へ"
+      last: "最後へ &raquo;"
+      previous: "&lsaquo; 前へ"
+      next: "次へ &rsaquo;"
+      truncate: "..."

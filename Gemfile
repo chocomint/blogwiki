@@ -14,3 +14,6 @@ gem 'jquery-rails'
 
 gem 'unicorn'
 gem 'RedCloth'
+gem "twitter-bootstrap-rails"
+gem "google-code-prettify-rails"
+gem "kaminari"

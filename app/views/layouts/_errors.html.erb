@@ -1,0 +1,11 @@
+<% if object.errors.any? %>
+  <div class="alert alert-error alert-block">
+    <a class="close" data-dismiss="alert" href="#">&times;</a>
+    <h4 class="alert-heading"><i class="icon-ban-circle"></i>エラーが発生しました</h4>
+    <ul>
+      <% object.errors.full_messages.each do |message| %>
+        <%= message %>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
