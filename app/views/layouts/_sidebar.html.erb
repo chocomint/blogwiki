@@ -1,6 +1,9 @@
-<h4>最新の記事</h4>
-<ul>
-  <%- for entry in @entries -%>
+<ul class="nav nav-list">      
+  <%- recent_entries.inject(nil) do |current_date, entry| -%>
+    <%- if current_date != entry.created_at.to_date -%>
+    <li class="nav-header"><%= entry.created_at.to_date.to_s %></li>
+  <% end %>
   <li><%= link_to truncate(entry.body, :length => 10), entry_path(entry) %></li>
+  <%- entry.created_at.to_date -%>
   <%- end -%>
 </ul>

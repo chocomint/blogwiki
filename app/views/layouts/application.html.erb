@@ -68,16 +68,7 @@
             </div>
             <div class="span3">
               <div class="well sidebar-nav">
-                <h3>最近の記事</h3>
-                <ul class="nav nav-list">
-                  <%- @sidebar_recent_entries.inject(nil) do |current_date, entry| -%>
-                    <%- if current_date != entry.created_at.to_date -%>
-                    <li class="nav-header"><%= entry.created_at.to_date.to_s %></li>
-                  <% end %>
-                  <li><%= link_to truncate(entry.body, :length => 10), entry_path(entry) %></li>
-                  <%- entry.created_at.to_date -%>
-                  <%- end -%>
-                </ul>
+                <%= render :partial => 'layouts/sidebar' %>
               </div><!--/.well -->
             </div><!--/span-->
         </div><!--/row-->
