@@ -1,3 +1,4 @@
+<h4>新着記事一覧</h4>
 <ul class="nav nav-list">      
   <%- recent_entries.inject(nil) do |current_date, entry| -%>
     <%- if current_date != entry.created_at.to_date -%>
